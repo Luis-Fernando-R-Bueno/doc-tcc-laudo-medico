@@ -1,0 +1,207 @@
+Se oriente pela analise de requisitos a seguir para criar a introdução de um trabalho de conclusão de curso, para um curso técnico em desenvolvimento de sistemas. O objetivo do trabalho é desenvolver uma sistema com  uma api (node js com express), um front-end (vite js) e uma versão mobile (react native - expo). Construa a introdução baseando-se em modelos de introdução de trabalhos de conclusão de curso ou artigo científico. 
+Informações sobre o trabalho: 
+
+**Pertinência, relevância e viabilidade**
+Integrantes do grupo: João Marcos, Luis Fernando, Luiz Henrique e Thiago Melo
+O QUE?
+
+Qual tema?
+ Software de preenchimento e gerenciamento de laudos hospitalares.
+
+Definição do tema. (Pertinência, relevância e viabilidade)
+ O tema está vinculado a área de desenvolvimento de sistemas destinados a área da saúde, utilizando aprendizados como o banco de dados, web, lógica de programação, desenvolvimento de aplicativos, dentre outros.
+
+Qual o problema?
+ Há na logística hospitalar o problema de preenchimento de laudos médicos, uma vez que os laudos são feitos à mão. Atrasando especificamente o setor do faturamento, diminuindo a eficiência e o fluxo na entrega das faturas ou no atraso dos lançamentos de exames. Resultando por vezes em problemas financeiros para o hospital.
+
+Qual seria o público-alvo?
+Principalmente os faturistas e os médicos, porém o sistema também auxiliaria os administradores hospitalares.
+
+Qual a justificativa?
+Devido à demora do fluxo dos laudos realizados a mão ou digitalmente em um sistema apartado do hospital, sendo necessário automatizar o processo de laudos médicos, para que os prontuários possam ser enviados no prazo exigido de forma mais rápida e eficaz. 
+
+
+Integrantes do grupo: João Marcos, Luis Fernando, Luiz Henrique e Thiago Melo
+
+Tema do Projeto: Desenvolvimento de um Software para Preenchimento e Gerenciamento de Laudos Hospitalares
+
+Definição do Tema:
+O presente trabalho propõe o desenvolvimento de um sistema voltado ao preenchimento e gerenciamento de laudos hospitalares, integrando conhecimentos adquiridos ao longo do curso, como lógica de programação, banco de dados, desenvolvimento web e de aplicativos. A pertinência do tema se dá pela crescente demanda de informatização no setor da saúde, buscando soluções que otimizem os processos internos hospitalares. É um projeto relevante socialmente e tecnicamente viável, pois utiliza tecnologias acessíveis e alinhadas com o escopo do curso.
+Sugestão adicional: vocês podem citar as diretrizes do Ministério da Saúde ou de normas da ANS/ANSIS que incentivam a digitalização de processos em saúde, reforçando a relevância do tema.
+
+Problema de Pesquisa:
+A logística hospitalar enfrenta problemas significativos no preenchimento de laudos médicos, que ainda são, em muitos casos, realizados manualmente. Esse processo manual gera atrasos principalmente no setor de faturamento, afetando a eficiência na entrega de faturas e no lançamento de exames, o que pode acarretar impactos financeiros consideráveis para as instituições de saúde.
+
+Justificativa:
+A justificativa para o desenvolvimento do sistema baseia-se na necessidade de automatização dos processos internos dos hospitais, especialmente no que se refere à emissão e gestão de laudos médicos. A lentidão causada pelo preenchimento manual e digital desde que o médico esteja no ambiente hospitalar compromete prazos e a precisão na entrega de informações ao setor de faturamento, afetando diretamente a sustentabilidade financeira da instituição. Um sistema informatizado visa reduzir o retrabalho, evitar perdas financeiras e aumentar a eficiência operacional.
+
+Público-Alvo:
+O software será destinado principalmente aos médicos responsáveis pela emissão dos laudos e aos faturistas que organizam e enviam essas informações para cobrança dos serviços. Além disso, gestores hospitalares poderão utilizar o sistema para monitoramento e controle de desempenho, tornando-se uma ferramenta estratégica para a administração.
+
+Gostaria que na introdução existam citações baseadas nos conteúdos a seguir (no final gerar as referências no formato ABNT para as citações realizadas):  
+
+** Todos os links (software semelhante, trabalhos acadêmicos e notícias da internet **
+https://valor.globo.com/patrocinado/pressworks/noticia/2025/08/26/startup-simplifica-o-acesso-de-advogados-a-laudos-medicos-e-ja-garante-milhoes-em-beneficios-previdenciarios-em-todo-o-brasil.ghtml
+https://www.infomoney.com.br/economia/inss-preve-economizar-r-25-bi-com-atestmed-em-2026/
+https://www.ufs.br/conteudo/76254-hu-ufs-ebserh-implementa-tecnologia-para-agilizar-acesso-a-exames-e-diagnosticos-por-imagem
+https://www.ssp.am.gov.br/sistema-em-uso-no-iml-reduz-o-tempo-de-espera-para-a-emissao-de-laudos/
+https://www.open-emr.org/
+https://www.drchrono.com/
+https://www.advancedmd.com/
+https://www.projesi.com.br
+nextgen.com
+https://repositorio.ufersa.edu.br/server/api/core/bitstreams/41194f17-25f1-4f66-9e24-73e6a6fefa9a/content
+https://tede.ufam.edu.br/handle/tede/11019
+https://repositorio.ufrn.br/server/api/core/bitstreams/342c2b3b-1609-42c3-a75e-dae588a713ff/content
+https://repositorio.ufrn.br/server/api/core/bitstreams/c41ce42e-93cb-49e2-a707-aa5e8461bb50/content
+https://repositorio.ufrn.br/items/6cedcd25-3e86-4de6-9e2e-8ea3e8b6e887
+https://www.epsjv.fiocruz.br/noticias/reportagem/falta-de-integracao-e-distribuicao-das-bases-de-dados-fragiliza-sistemas-de
+
+**Análise de requisitos do sistema: **
+Análise de Requisitos – Sistema MEDSYNC
+1. Descrição Geral do Sistema
+O MEDSYNC é um sistema para gerenciamento e preenchimento de laudos hospitalares, composto por duas plataformas:
+•	Web (React + JavaScript + SQL Server): voltada para administradores e faturistas do hospital.
+•	Aplicativo Mobile (React Native): voltado para médicos e administradores.
+O sistema permite cadastro de usuários (somente administradores têm essa permissão), controle de acessos, notificações para médicos, preenchimento de laudos digitais e encaminhamento automático para faturistas. Além disso, terá integração com o software hospitalar via API.
+________________________________________
+2. Requisitos Funcionais (RF)
+1.	RF01 – Login e Autenticação
+o	O sistema deve permitir login com usuário e senha, cadastrados previamente pelo administrador.
+2.	RF02 – Cadastro de Usuários
+o	Apenas administradores podem cadastrar novos usuários (médicos, faturistas, outros administradores).
+3.	RF03 – Cadastro de Pacientes
+o	O sistema deve permitir cadastrar, editar e consultar informações de pacientes.
+4.	RF04 – Criação de Atendimentos
+o	O administrador/faturista pode criar atendimentos vinculados a pacientes.
+5.	RF05 – Notificação ao Médico
+o	Após a criação de um atendimento, o sistema deve enviar notificação ao médico no aplicativo.
+6.	RF06 – Preenchimento de Laudos Médicos (atualizado):
+O médico deve preencher laudos selecionando opções pré-definidas (ex.: diagnósticos, sintomas, observações clínicas), podendo adicionar informações complementares em campo de texto livre, se necessário.
+
+7.	RF07 – Encaminhamento Automático
+o	Após preenchimento do laudo, o sistema deve disponibilizar o documento aos faturistas.
+8.	RF08 – Edição e Impressão de Laudos
+o	Os faturistas devem poder revisar, editar e imprimir laudos médicos.
+9.	RF09 – Relatórios Gerenciais
+o	O sistema deve gerar relatórios de atendimentos e laudos para administradores.
+10.	RF10 – Integração via API
+O sistema deve se integrar ao software hospitalar para troca de dados (ex.: pacientes, atendimentos).
+
+• RF11 – Cadastro de Opções de Laudos:
+O sistema deve permitir que administradores médicos cadastrem, editem e removam as opções pré-definidas que aparecerão nos laudos (ex.: sintomas, diagnósticos, observações).
+• RF12 – Atualização Dinâmica dos Laudos:
+O sistema deve permitir que as opções de preenchimento dos laudos sejam atualizadas sem necessidade de modificar o código-fonte (ex.: via banco de dados). 
+• RF13 – Chat Interno:
+O sistema deve disponibilizar uma aba de chat no aplicativo e na versão web, permitindo a comunicação em tempo real entre médicos, administradores e faturistas.
+• RF14 – Histórico de Conversas:
+O sistema deve armazenar o histórico das conversas realizadas no chat, com identificação de participantes e data/hora das mensagens.
+• RF15 – Dashboard Administrativo:
+O sistema deve apresentar ao administrador um painel com métricas, como:
+•	número de pacientes cadastrados;
+•	número de atendimentos em andamento;
+•	quantidade de laudos preenchidos;
+•	estatísticas de uso (ex.: laudos por médico).
+• RF16 – Filtros e Relatórios do Dashboard:
+O dashboard deve permitir aplicar filtros por período, médico e status do atendimento.
+
+o	
+________________________________________
+3. Requisitos Não Funcionais (RNF)
+1.	RNF01 – Usabilidade: A interface deve ser intuitiva e responsiva (Web e Mobile).
+2.	RNF02 – Desempenho: O sistema deve suportar múltiplos acessos simultâneos sem queda de performance.
+3.	RNF03 – Segurança:
+o	Senhas devem ser armazenadas criptografadas.
+o	Acesso controlado por níveis de permissão.
+o	Implementar HTTPS e autenticação JWT para API.
+4.	RNF04 – Portabilidade: O aplicativo deve estar disponível para Android e iOS.
+5.	RNF05 – Disponibilidade: O sistema deve estar disponível 24/7, com tempo de indisponibilidade mínimo.
+6.	RNF06 – Compatibilidade: O sistema deve ser compatível com navegadores modernos (Chrome, Edge, Firefox).
+________________________________________
+4. Regras de Negócio (RN)
+RN01 – Apenas administradores podem cadastrar usuários no sistema.
+RN02 – Um laudo só pode ser encaminhado ao faturista após ser preenchido e assinado digitalmente pelo médico.
+RN03 – O sistema deve notificar médicos apenas de atendimentos vinculados a eles.
+RN04 – Os faturistas só podem editar campos administrativos do laudo (ex.: código de cobrança, observações), não o conteúdo médico.
+RN05 – Cada paciente deve ter um histórico de laudos acessível apenas por usuários autorizados.
+
+RN06 – Padronização de Diagnósticos e Sintomas:
+O médico deve escolher os sintomas e diagnósticos a partir de listas pré-definidas cadastradas pelo administrador.
+RN07 – Flexibilidade no Preenchimento:
+O médico poderá adicionar observações em campo de texto livre, mas os diagnósticos principais devem ser escolhidos da lista padronizada.
+RN08 – Versionamento das Listas de Laudos:
+Caso uma lista de opções seja alterada pelo administrador, os laudos já preenchidos não devem ser modificados retroativamente, preservando o histórico.   
+RN09 – Restrição de Acesso ao Chat:
+Apenas usuários autenticados podem utilizar o chat, sendo que mensagens são visíveis apenas para os participantes da conversa.
+RN10 – Sigilo de Informações no Chat:
+Mensagens enviadas no chat não podem conter dados sensíveis de pacientes (dados pessoais, diagnósticos detalhados), devendo ser usadas apenas para comunicação administrativa.
+RN11 – Acesso ao Dashboard:
+Apenas administradores têm acesso ao dashboard completo. Faturistas podem ter acesso restrito a relatórios financeiros e de laudos.
+
+________________________________________
+5. Requisitos de Sistema (Tecnológicos)
+1.	Front-end Web: React.js + JavaScript.
+2.	Mobile: React Native.
+3.	Banco de Dados: SQL Server.
+4.	API: Node.js (Express) ou ASP.NET Core (boa integração com SQL Server).
+5.	Autenticação: JWT + bcrypt (para criptografia de senhas).
+6.	Infraestrutura: Hospedagem em servidor cloud (Azure ou AWS recomendados).
+7.	Controle de Versão: GitHub/GitLab.
+8.	Notificações Mobile: Firebase Cloud Messaging (FCM).
+9.	Chat: Pode ser implementado usando WebSockets (via Socket.IO no Node.js ou SignalR no .NET) para comunicação em tempo real.
+10.	Dashboard: Pode ser construído em React usando bibliotecas como Recharts, Chart.js ou D3.js para exibição de gráficos.
+11.	Banco de Dados: Tabelas adicionais para mensagens do chat e logs de comunicação.
+
+Tabelas – MEDSYNC
+Usuarios
+•	id_usuario (PK)
+•	nome
+•	email
+•	senha_hash
+•	perfil
+•	status
+•	data_criacao
+Pacientes
+•	id_paciente (PK)
+•	nome
+•	data_nascimento
+•	cpf
+•	telefone
+•	endereco
+•	data_cadastro
+Atendimentos
+•	id_atendimento (PK)
+•	id_paciente (FK)
+•	id_medico (FK)
+•	data_atendimento
+•	status
+Laudos
+•	id_laudo (PK)
+•	id_atendimento (FK)
+•	id_medico (FK)
+•	observacoes
+•	data_preenchimento
+•	status
+Sintomas
+•	id_sintoma (PK)
+•	descricao
+Diagnosticos
+•	id_diagnostico (PK)
+•	descricao
+Laudo_Sintomas
+•	id_laudo (FK)
+•	id_sintoma (FK)
+Laudo_Diagnosticos
+•	id_laudo (FK)
+•	id_diagnostico (FK)
+Mensagens_Chat
+•	id_mensagem (PK)
+•	id_remetente (FK)
+•	id_destinatario (FK)
+•	conteudo
+•	data_envio
+Logs_Acoes
+•	id_log (PK)
+•	id_usuario (FK)
+•	acao
+•	data_hora
